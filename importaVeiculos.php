@@ -6,7 +6,7 @@ $conexao = ConexaoPdo::getConexao();
 lerPagina(1, 123, $conexao);
 
 function lerPagina($pagina = 1, $idVendedor, $conexao) {
-    $url = 'https://www.webmotors.com.br/carros/estoque/?idrevendedor=$idVendedor;
+    $url = 'https://www.webmotors.com.br/carros/estoque/?idrevendedor='.$idVendedor;
 
     $ch = curl_init();
 
