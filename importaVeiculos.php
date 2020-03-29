@@ -3,10 +3,10 @@ require_once('include/ConexaoPdo.php');
 
 $conexao = ConexaoPdo::getConexao();
 
-lerPagina(1, 'minha-loja', $conexao);
+lerPagina(1, 123, $conexao);
 
-function lerPagina($pagina = 1, $nomeLoja, $conexao) {
-    $url = 'http://www.riodosulcarros.com.br/loja/'.$nomeLoja.'?&p='.$pagina;
+function lerPagina($pagina = 1, $idVendedor, $conexao) {
+    $url = 'https://www.webmotors.com.br/carros/estoque/?idrevendedor=$idVendedor;
 
     $ch = curl_init();
 
